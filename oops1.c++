@@ -7,6 +7,21 @@ public:
 //state and properties
 int age;
 string type;
+//constructor
+//Default constructor
+Animal(){
+    cout<<"constructor called"<<endl;
+    this->weight=0;
+    this->age=0;
+    this->type=" ";
+}
+//parametrized constructor
+Animal(int age){
+    this->age=age;
+    cout<<"parameterized constructor called"<<endl;
+}
+~Animal(){
+    cout<<"destructor called"<<endl;}
 //behaviour
 void eat(){
 
@@ -41,6 +56,13 @@ int main(){
 
 
    ramesh.sleep();
+   Animal a(10);
+   Animal*b=new Animal(100);
+   Animal d;
+   d.age=10;
+   Animal* e=new Animal(19);
+   //manually
+   delete e;
 
 return 0;
 }
